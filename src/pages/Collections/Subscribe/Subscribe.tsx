@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../../redux/hooks/hooks";
+import { useAppSelector } from "../../../redux/store";
 import { Link } from "react-router-dom";
 
 export default function Subscribe() {

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Home from "./Home/Home";
-import Trending from "./TrendingSection/Trending";
-import Collections from "./BrowseCollections/Collections";
-import Discover from "./Discover/Discover";
-import Subscribe from "./Subscribe/Subscribe";
-import Work from "./HowItWorks/Work";
+import Trending from "./trendingSection/Trending";
+import Collections from "./browseCollections/Collections";
+import Discover from "./discover/Discover";
+import Subscribe from "./subscribe/Subscribe";
+import Work from "./howItWorks/Work";
 import Loader from "../../components/loader/Loader";
 import { collectionsImages } from "../../redux/slice/getCollectionsSlice";
-import { useAppDispatch } from "../../redux/hooks/hooks";
+import { useAppDispatch } from "../../redux/store";
+import Home from "./hero/Home";
 
 export default function Index() {
   const dispatch = useAppDispatch();

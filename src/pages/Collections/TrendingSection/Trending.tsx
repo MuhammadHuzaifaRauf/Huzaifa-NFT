@@ -1,5 +1,6 @@
+import React from "react";
 import Box from "../../../components/trendingBox/Box";
-import { useAppSelector } from "../../../redux/hooks/hooks";
+import { useAppSelector } from "../../../redux/store";
 
 export default function Trending() {
   const collections = useAppSelector((state) => state.collections.data);
@@ -7,9 +8,9 @@ export default function Trending() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col lg:w-[1046px] md:w-[768px] sm:w-[375px]">
-          <div className="text-white py-5 text-[28px] font-semibold capitalize leading-[39.20px] ms-5 md:ms-10">
+          <div className="text-white  text-[28px] font-semibold capitalize leading-[39.20px] ms-5 md:ms-10">
             Trending Collection
           </div>
           <div className="text-white text-base font-normal font-['Work Sans'] leading-snug ms-5 md:ms-10">

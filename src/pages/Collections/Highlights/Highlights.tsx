@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks/hooks";
+import React from "react";
+import { useAppSelector } from "../../../redux/store";
 import eye from "../../../assets/Eye.png";
-import { collectionsImages } from "../../../redux/slice/getCollectionsSlice";
 
 export default function Highlights() {
   const collections = useAppSelector((state) => state.collections.data);
 
   return (
     <>
-      {collections.slice(20, 21).map((item, i) => {
+      {collections.map((item, i) => {
         return (
           <div key={i}>
             <div className="w-full h-[640px] flex-col justify-start items-center inline-flex">

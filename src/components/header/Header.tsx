@@ -61,7 +61,7 @@ export default function Header() {
               transition: "height 0.4s ease",
             }}
           >
-            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row gap-4 items-center text-white text-[18px] font-bold">
+            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row gap-14 items-center text-white text-[20px] font-bold">
               <div className="text-md">Marketplace</div>
               <div className="text-md">Rankings</div>
               <div className="text-md">Connect a wallet</div>

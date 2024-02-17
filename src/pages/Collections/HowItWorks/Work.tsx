@@ -1,5 +1,5 @@
 import WorkCard from "../../../components/workCard/WorkCard";
-import { useAppSelector } from "../../../redux/hooks/hooks";
+import { useAppSelector } from "../../../redux/store";
 
 export default function Work() {
   const collections = useAppSelector((state) => state.collections.data);

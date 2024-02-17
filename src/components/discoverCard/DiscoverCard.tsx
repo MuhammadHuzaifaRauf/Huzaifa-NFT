@@ -1,18 +1,6 @@
-import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
-import { collectionsImages } from "../../redux/slice/getCollectionsSlice";
+import React from "react";
 import { Link } from "react-router-dom";
-
-interface ImageData {
-  image_url: string;
-  collection: string;
-  name: string;
-}
-
-interface DiscoverCardProps {
-  display?: string;
-  item?: any;
-}
+import { DiscoverCardProps } from "../../types/types";
 
 const DiscoverCard: React.FC<DiscoverCardProps> = ({ item, display }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
 import globe from "../../assets/vectors/Globe.svg";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { getNftImages } from "../../redux/slice/getNftSlice";
 
 export default function Detail() {
@@ -11,15 +11,27 @@ export default function Detail() {
 
   const location = useLocation();
 
-  const getNft = useAppSelector((state) => state.getNft.data);
+  const { data: getNft, isLoading } = useAppSelector((state) => state.getNft);
+
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const identifier = searchParams.get("id") as string;
     const address = searchParams.get("address") as string;
     const chain = searchParams.get("chain") as string;
 
-    dispatch(getNftImages({ chain, address, identifier }));
+    if (identifier && address && chain) {
+      dispatch(getNftImages({ chain, address, identifier }));
+    }
   }, [dispatch, location.search]);
+
+  if (isLoading) {
+    return (
+      <div role="status" className="flex justify-center my-56">
+        <div className="animate-spin shadow-inner rounded-full h-32 w-32 border-t-4 border-neutral-400 border-solid"></div>
+        <span className="sr-only">Loading...</span>
+      </div>
+    );
+  }
 
   return (
     <>

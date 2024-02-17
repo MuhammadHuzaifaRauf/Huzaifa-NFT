@@ -1,5 +1,5 @@
 import BrowseCard from "../../../components/browseCard/BrowseCard";
-import { useAppSelector } from "../../../redux/hooks/hooks";
+import { useAppSelector } from "../../../redux/store";
 
 export default function Collections() {
   const collections = useAppSelector((state) => state.collections.data);

@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Collections from "./Collections";
-import Details from "./Nfts/Details";
+import Collections from "./collections";
+import Details from "./nftDetails/Details";
 import Footer from "../components/footer/Footer";
-import Collection from "./Collection/Collection";
+import Collection from "./collection/Collection";
 import Header from "../components/header/Header";
 import React from "react";
 

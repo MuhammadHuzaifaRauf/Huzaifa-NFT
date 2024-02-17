@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../../redux/hooks/hooks";
+import { useAppSelector } from "../../../redux/store";
 import rocket from "../../../assets/images/RocketLaunch.png";
 import { Link } from "react-router-dom";
 

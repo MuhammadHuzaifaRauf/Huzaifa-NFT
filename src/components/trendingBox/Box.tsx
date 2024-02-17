@@ -16,7 +16,7 @@ const Box: React.FC<BoxProps> = ({ item, display }) => {
     <>
       <div>
         <div className={`${display}`}>
-          <div className="mx-2 py-14 flex flex-wrap justify-center  ">
+          <div className="mx-2 py-6flex flex-wrap justify-center  ">
             <div className="max-w-[330px] bg-zinc-800 rounded-[20px] flex-col justify-start items-start gap-[15px] inline-flex">
               <div className=" h-[445px] flex-col justify-start items-start gap-[15px] flex">
                 <div className="max-w-[375px]">
