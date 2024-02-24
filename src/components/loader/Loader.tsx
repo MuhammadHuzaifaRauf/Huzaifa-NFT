@@ -1,8 +1,9 @@
 import React from "react";
-const Loader: React.FC = () => {
+
+const Loader = () => {
   return (
-    <div role="status" className="flex justify-center my-56">
-      <div className="animate-spin shadow-inner rounded-full h-32 w-32 border-t-4 border-neutral-400 border-solid"></div>
+    <div className="flex justify-center items-center h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-t-8 border-b-8 border-gray-200"></div>{" "}
       <span className="sr-only">Loading...</span>
     </div>
   );

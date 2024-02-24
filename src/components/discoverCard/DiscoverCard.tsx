@@ -1,56 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { DiscoverCardProps } from "../../types/types";
+import { DiscoverCardProps } from "../../types/Types";
 
 const DiscoverCard: React.FC<DiscoverCardProps> = ({ item, display }) => {
   return (
     <>
       <div
-        className={`${display} w-full h-[310px] bg-neutral-500 rounded-[20px] flex-col justify-center items-center mb-3`}
+        className={`${display} w-[315px] md:w-[330px] msc:w-[360px] fs:w-[330px] xl:w-[385px] h-[402px] md:h-[469px] bg-neutral-700 rounded-[20px] flex-col justify-center items-center mb-3`}
       >
-        <div className="self-stretch h-[296px] rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-start gap-2.5 flex">
+        {/* <div className="w-[315px] md:w-[330px] msc:w-[360px] fs:w-[330px] xl:w-[385px] h-[238px] md:h-[296px] rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-start gap-2.5 flex"> */}
+        <div className="w-[325px] md:w-[340px] msc:w-[370px] fs:w-[340px] xl:w-[395px] h-[248px] md:h-[300px] rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-start gap-2.5 flex">
           <Link to={`/collection/${item.collection}`}>
             <img
-              className="w-[330px] h-[296px] rounded-tl-[20px] rounded-tr-[20px]"
+              // className="w-[315px] md:w-[330px] msc:w-[360px] fs:w-[330px] xl:w-[385px] h-[238px] md:h-[296px] rounded-tl-[20px] rounded-tr-[20px] object-cover"
+              className="w-[325px] md:w-[340px] msc:w-[370px] fs:w-[340px] xl:w-[395px] h-[248px] md:h-[300px] rounded-tl-[20px] rounded-tr-[20px] object-cover"
               src={item.image_url}
               alt={item.collection.slice(0, 15)}
             />
           </Link>
         </div>
-        <div className="self-stretch h-[173px] px-[30px] bg-neutral-700 pt-5 pb-[25px] rounded-bl-[20px] rounded-br-[20px] flex flex-col justify-start items-start gap-[25px]">
-          <div className="self-stretch h-[60px] flex flex-col justify-start items-start gap-[5px]">
-            <div className="self-stretch text-white text-[22px] font-semibold work-sans capitalize leading-[30.80px]">
+        <div className="w-[315px] md:w-[330px] msc:w-[360px] fs:w-[330px] xl:w-[385px] h-[164px] md:h-[173px] px-[30px] bg-neutral-700 pt-5 pb-[25px] rounded-bl-[20px] rounded-br-[20px] flex flex-col justify-start items-start gap-[25px]">
+          <div className="h-[60px] flex flex-col justify-start items-start gap-[5px]">
+            <div className="text-white text-[22px] font-semibold work-sans capitalize leading-[30.80px]">
               {item.name.slice(0, 15)}
             </div>
-            <div className="self-stretch justify-start items-start gap-3 inline-flex">
+            <div className="justify-start items-start gap-3 inline-flex">
               <div className="justify-start items-start gap-2.5 flex">
                 <div className="w-6 h-6 justify-center items-center flex">
                   <img
                     className="w-6 h-6 rounded-[120px]"
                     src={item.image_url}
-                    alt={item.collection.slice(0, 15)}
+                    alt=""
                   />
                 </div>
               </div>
-              <div className="grow shrink basis-0 text-white text-base font-normal space-mono leading-snug">
+              <div className="text-white text-[16px] font-normal font-space-mono leading-snug">
                 MoonDancer
               </div>
             </div>
           </div>
-          <div className="self-stretch justify-start items-start inline-flex">
-            <div className="grow shrink basis-0 pr-[21px] flex-col justify-start items-start gap-2 inline-flex">
-              <div className="self-stretch text-zinc-500 text-xs font-normal space-mono leading-[13.20px]">
+          <div className="justify-between items-center inline-flex">
+            <div className="flex-col justify-start items-start gap-2 inline-flex">
+              <div className="text-zinc-500 text-[12px] font-normal font-space-mono leading-[13.20px]">
                 Price
               </div>
-              <div className="self-stretch text-white text-base font-normal space-mono leading-snug">
+              <div className="text-white text-[16px] font-normal font-space-mono leading-snug">
                 1.63 ETH
               </div>
             </div>
-            <div className="grow shrink basis-0 flex-col justify-center items-end gap-2 inline-flex">
-              <div className="self-stretch text-right text-zinc-500 text-xs font-normal space-mono leading-[13.20px]">
+            <div className="flex-col justify-center items-end gap-2 inline-flex pl-[88px]">
+              <div className="text-right text-zinc-500 text-[12px] font-normal font-space-mono leading-[13.20px]">
                 Highest Bid
               </div>
-              <div className="self-stretch text-right text-white text-base font-normal space-mono leading-snug">
+              <div className="text-right text-white text-[16px] font-normal font-space-mono leading-snug">
                 0.33 wETH
               </div>
             </div>

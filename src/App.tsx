@@ -1,12 +1,7 @@
 import React from "react";
 import "./App.css";
-import Routes from "./pages/Routes";
-function App() {
-  return (
-    <>
-      <Routes />
-    </>
-  );
-}
+import Routes from "../src/pages/Routes";
 
-export default App;
+export default function App() {
+  return <Routes />;
+}
